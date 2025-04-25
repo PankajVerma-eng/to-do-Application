@@ -1,0 +1,32 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div formArrayName="forms" class="form-title">
+        <div *ngFor="let formGroup of forms.controls; index as i" [formGroupName]="i" class="form-item">
+
+            <label for="taskname" class="form-label">Task Name</label>
+            <input type="text" id="taskname" placeholder="Name of Task" formControlName="taskname" />
+            <small class="text-danger"
+                *ngIf="!formGroup.get('taskname')?.valid && formGroup.get('taskname')?.touched">Task Required</small>
+
+            <label for="description" class="form-label">Description</label>
+            <input type="text" id="description" placeholder="description" formControlName="description" />
+            <small class="text-danger"
+                *ngIf="!formGroup.get('description')?.valid && formGroup.get('description')?.touched"> Description required</small>
+
+
+            <label for="estimatedTime" class="form-label" >Estimated Time</label>
+            <input type="date" id="estimatedTime" placeholder="estimatedTime" formControlName="estimatedTime" />
+            <small class="text-danger"
+            *ngIf="!formGroup.get('estimatedTime')?.valid && formGroup.get('estimatedTime')?.touched"> Estimated Time required</small>
+
+            <label  class="form-label">Status:</label>
+            <select formControlName="status">
+                <option value="Pending">Pending</option>
+                <option value="Progress">Progress</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <button (click)="removeForm(i)" class="Removebtn">Remove Form</button>
+        </div>
+    </div>
+    <button (click)="addForm()" class="form-title" >Add Form</button>
+    <button type="submit" value="submit" class="form-title" [disabled]="form.invalid">Submit</button>
+</form>

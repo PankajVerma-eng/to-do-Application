@@ -1,0 +1,49 @@
+<div class="all">
+    <h1 class="heading">Add Notes Form</h1>
+    <div class="allform">
+        <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="taskname" class="form-label">Task Name</label>
+                <br>
+                <input type="text" class="form-control " id="taskname" formControlName='taskname'>
+                <small class="text-danger"
+                    *ngIf="!todoForm.get('taskname')?.valid && todoForm.get('taskname')?.touched">Please enter
+                    Task</small>
+            </div>
+
+            <div class="form-group">
+                <label for="description" class="form-label">Description</label>
+                <br>
+                <input type="text" class="form-control" id="description" formControlName='description'>
+                <small class="text-danger"
+                    *ngIf="!todoForm.get('description')?.valid && todoForm.get('description')?.touched">Please
+                    Enter Description</small>
+            </div>
+
+            <div class="form-group">
+                <label for="estimatedTime" class="form-label">EstimatedTime</label>
+                <br>
+                <input type="date" class="form-control" id="estimatedTime" formControlName='estimatedTime'>
+
+                <small class="text-danger"
+                    *ngIf="!todoForm.get('estimatedTime')?.valid && todoForm.get('estimatedTime')?.touched">Please enter
+                    valid
+                    Date</small>
+            </div>
+
+            <div class="form-group">
+                <label class="status">Status:</label>
+                <select formControlName="status">
+                    <option value="Pending">Pending</option>
+                    <option value="Progress">Progress</option>
+                    <option value="Completed">Completed</option>
+                </select>
+            </div>
+
+            <button type="submit" value="submit" [disabled]="todoForm.invalid" class="taskbtn">Add Task</button>
+
+        </form>
+
+    </div>
+
+</div>

@@ -1,0 +1,60 @@
+* {
+    font-family: serif;
+}
+
+.all {
+    margin: 0px;
+    background-color: rgb(243, 247, 245);
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+.allform {
+    width: 40%;
+    height: 57%;
+    margin-left: 30%;
+    border: 1px solid rgb(216, 171, 171);
+    padding-left: 8%;
+    border-radius: 5%;
+}
+
+.form-group {
+    margin-top: 10px;
+
+}
+
+.form-control {
+    width: 55%;
+}
+
+.form-label {
+    font-style: bold;
+    font-size: 18px;
+
+}
+
+.status {
+    font-size: 18px;
+}
+
+select {
+    margin-left: 18px;
+}
+
+.btn {
+    margin-left: 5px;
+}
+
+.taskbtn {
+    width: 85px;
+    margin-top: 25px;
+    margin-left: 75px;
+}
