@@ -1,3 +1,5 @@
+<div class="allbody"></div>
+<h1 class="multipleHeading">Add Multiple Notes</h1>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <div formArrayName="forms" class="form-title">
         <div *ngFor="let formGroup of forms.controls; index as i" [formGroupName]="i" class="form-item">
@@ -27,6 +29,6 @@
             <button (click)="removeForm(i)" class="Removebtn">Remove Form</button>
         </div>
     </div>
-    <button (click)="addForm()" class="form-title" >Add Form</button>
-    <button type="submit" value="submit" class="form-title" [disabled]="form.invalid">Submit</button>
+    <button (click)="addForm()" class="form-title">Add Form</button>
+    <button type="submit" value="submit" [disabled]="form.invalid">Submit</button>
 </form>

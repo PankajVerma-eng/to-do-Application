@@ -1,27 +1,18 @@
-// .form-item {
-//     display: flex;
-//     flex-direction:row;
-//     margin-bottom: 1rem; 
-// }
-
-
-// .form-label {
-//     margin-bottom: 0.25rem;
-// }
-
-// input,
-// select {
-//     margin-bottom: 0.25rem;
-// }
-
-// .text-danger {
-//     font-size: 0.875rem;
-//     color: red;
-//     margin-top: 0.25rem;
-// }
-
+.allbody{
+    // background-color: rgb(92, 187, 140);
+    background-color: black;
+    // width: 100vw;
+}
+.multipleHeading{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-family:Garamond;
+}
 .form-title{
    margin-top: 20px;
+   margin-left: 30px;
 }
 .form-label{
     margin-left:7px;
